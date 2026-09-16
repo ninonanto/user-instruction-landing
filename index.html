@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Instructions</title>
+    <title>How to Charge Your Vehicle</title>
     <style>
         * {
             margin: 0;
@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -28,19 +28,40 @@
 
         .header {
             text-align: center;
-            color: white;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
+        }
+
+        .logo {
+            max-width: 200px;
+            height: auto;
+            margin: 0 auto 30px;
+            display: block;
         }
 
         .header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin-bottom: 8px;
             font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .header-khmer {
+            font-size: 1.8rem;
+            color: #34495e;
+            margin-bottom: 20px;
+            font-weight: 500;
         }
 
         .header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
+            font-size: 1rem;
+            color: #7f8c8d;
+            margin-bottom: 5px;
+        }
+
+        .header-khmer-sub {
+            font-size: 0.95rem;
+            color: #95a5a6;
         }
 
         .options {
@@ -55,7 +76,7 @@
             border-radius: 15px;
             padding: 40px 30px;
             text-align: center;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
             text-decoration: none;
@@ -68,7 +89,7 @@
 
         .card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
         }
 
         .card-icon {
@@ -77,21 +98,36 @@
         }
 
         .card h2 {
-            font-size: 1.8rem;
-            color: #333;
-            margin-bottom: 10px;
+            font-size: 1.6rem;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .card-khmer {
+            font-size: 1.3rem;
+            color: #34495e;
+            margin-bottom: 15px;
+            font-weight: 500;
         }
 
         .card p {
-            color: #666;
-            font-size: 1rem;
+            color: #7f8c8d;
+            font-size: 0.95rem;
             line-height: 1.6;
             margin-bottom: 10px;
         }
 
+        .card-khmer-desc {
+            color: #95a5a6;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
         .card-link {
             display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #e74c3c 0%, #d35400 100%);
             color: white;
             padding: 12px 30px;
             border-radius: 25px;
@@ -107,7 +143,11 @@
 
         @media (max-width: 768px) {
             .header h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
+            }
+
+            .header-khmer {
+                font-size: 1.4rem;
             }
 
             .options {
@@ -123,17 +163,29 @@
             }
 
             .card h2 {
-                font-size: 1.5rem;
+                font-size: 1.3rem;
+            }
+
+            .card-khmer {
+                font-size: 1.1rem;
             }
         }
 
         @media (max-width: 480px) {
+            .logo {
+                max-width: 150px;
+            }
+
             .header h1 {
-                font-size: 1.5rem;
+                font-size: 1.4rem;
+            }
+
+            .header-khmer {
+                font-size: 1.1rem;
             }
 
             .header p {
-                font-size: 0.95rem;
+                font-size: 0.9rem;
             }
 
             .card {
@@ -145,11 +197,15 @@
             }
 
             .card h2 {
-                font-size: 1.3rem;
+                font-size: 1.1rem;
+            }
+
+            .card-khmer {
+                font-size: 0.95rem;
             }
 
             .card p {
-                font-size: 0.9rem;
+                font-size: 0.85rem;
             }
         }
     </style>
@@ -157,8 +213,11 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>📚 User Instructions</h1>
-            <p>Choose how you'd like to learn</p>
+            <img src="https://via.placeholder.com/200x100/FF6600/FFFFFF?text=VETEnergy" alt="VET Energy Logo" class="logo">
+            <h1>How to Charge Your Vehicle</h1>
+            <div class="header-khmer">របៀបសាក់ថាមពលរថយន្តរបស់អ្នក</div>
+            <p>Choose your preferred instruction format</p>
+            <div class="header-khmer-sub">ជ្រើសរើសទម្រង់ការណែនាំដែលអ្នកពេញលេញ</div>
         </div>
 
         <div class="options">
@@ -166,7 +225,9 @@
             <a href="https://photos.app.goo.gl/o18QJEQ4zGRRsvzp6" target="_blank" class="card">
                 <div class="card-icon">🖼️</div>
                 <h2>Image Guide</h2>
+                <div class="card-khmer">ការណែនាំលម្អិត</div>
                 <p>Follow step-by-step instructions with detailed screenshots and annotations</p>
+                <div class="card-khmer-desc">អនុវត្តតាមការណែនាំលម្អិតជាដំណាលដោយរូបភាពឆាប់រហ័ស</div>
                 <span class="card-link">View Photos</span>
             </a>
 
@@ -174,7 +235,9 @@
             <a href="https://drive.google.com/file/d/1qJBI1ia8DcZ61kokYOGvGKGgYVeJmpvK/view?usp=sharing" target="_blank" class="card">
                 <div class="card-icon">🎥</div>
                 <h2>Video Tutorial</h2>
+                <div class="card-khmer">វីដេអូបង្រៀន</div>
                 <p>Watch a comprehensive video walkthrough of the entire process</p>
+                <div class="card-khmer-desc">មើលការណែនាំវីដេអូលម្អិតរបស់ដំណើរការទាំងមូល</div>
                 <span class="card-link">Watch Video</span>
             </a>
         </div>
