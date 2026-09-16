@@ -1,246 +1,234 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="km">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to Charge Your Vehicle</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>របៀបសាកថាមពលរថយន្ត | How to Charge Your Vehicle — VET-ENERGY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  .vet-guide *,
+  .vet-guide *::before,
+  .vet-guide *::after { margin:0; padding:0; box-sizing:border-box; }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
+  .vet-guide {
+    --charcoal:      #22262A;
+    --charcoal-soft: #32383E;
+    --charcoal-line: #3E464D;
+    --orange:        #FF6B00;
+    --orange-dark:   #D95800;
+    --ink:           #1B1F23;
+    --muted:         #7A848C;
+    --surface:       #FFFFFF;
+    --page:          #F2F4F6;
 
-        .container {
-            max-width: 1000px;
-            width: 100%;
-        }
+    font-family: 'Noto Sans Khmer','Inter','Segoe UI',Tahoma,sans-serif;
+    background: var(--page);
+    color: var(--ink);
+    padding: 28px 18px 48px;
+    line-height: 1.55;
+  }
 
-        .header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
+  .vet-guide .container { max-width: 980px; margin: 0 auto; }
 
-        .logo {
-            max-width: 200px;
-            height: auto;
-            margin: 0 auto 30px;
-            display: block;
-        }
+  /* ---------- Header ---------- */
+  .vet-guide .masthead {
+    background: linear-gradient(160deg, var(--charcoal) 0%, var(--charcoal-soft) 100%);
+    border-radius: 18px;
+    padding: 40px 30px 34px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 12px 34px rgba(34,38,42,.20);
+  }
+  .vet-guide .masthead::after {
+    content:"";
+    position:absolute; left:0; right:0; bottom:0; height:5px;
+    background: linear-gradient(90deg, var(--orange) 0%, var(--orange-dark) 100%);
+  }
 
-        .header h1 {
-            font-size: 2.2rem;
-            color: #2c3e50;
-            margin-bottom: 8px;
-            font-weight: 600;
-            line-height: 1.4;
-        }
+  .vet-guide .logo { max-width: 190px; height:auto; display:block; margin:0 auto 22px; }
 
-        .header-khmer {
-            font-size: 1.8rem;
-            color: #34495e;
-            margin-bottom: 20px;
-            font-weight: 500;
-        }
+  .vet-guide .title-km {
+    font-size: 1.95rem; font-weight: 700; color:#fff; letter-spacing:.2px;
+  }
+  .vet-guide .title-en {
+    font-family:'Inter','Segoe UI',sans-serif;
+    font-size: 1.05rem; font-weight: 600; letter-spacing:.14em;
+    text-transform: uppercase; color: var(--orange); margin-top: 6px;
+  }
+  .vet-guide .rule {
+    width: 54px; height: 3px; background: var(--orange);
+    border-radius: 2px; margin: 18px auto 16px;
+  }
+  .vet-guide .sub-km { font-size: 1rem; color:#C9D0D6; }
+  .vet-guide .sub-en {
+    font-family:'Inter','Segoe UI',sans-serif;
+    font-size: .88rem; color:#8E99A3; margin-top: 3px;
+  }
 
-        .header p {
-            font-size: 1rem;
-            color: #7f8c8d;
-            margin-bottom: 5px;
-        }
+  /* ---------- Cards ---------- */
+  .vet-guide .options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 28px;
+  }
 
-        .header-khmer-sub {
-            font-size: 0.95rem;
-            color: #95a5a6;
-        }
+  .vet-guide .card {
+    background: var(--surface);
+    border: 1px solid #E3E7EA;
+    border-top: 4px solid var(--orange);
+    border-radius: 14px;
+    padding: 34px 26px 28px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 16px rgba(34,38,42,.07);
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+  .vet-guide .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 38px rgba(34,38,42,.16);
+  }
 
-        .options {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
+  .vet-guide .card-icon {
+    width: 92px; height: 92px; border-radius: 50%;
+    background: var(--charcoal);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 18px;
+  }
+  .vet-guide .card-icon svg { width: 46px; height: 46px; stroke: var(--orange); fill: none; stroke-width: 1.7; }
 
-        .card {
-            background: white;
-            border-radius: 15px;
-            padding: 40px 30px;
-            text-align: center;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-            text-decoration: none;
-            color: inherit;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 20px;
-        }
+  .vet-guide .card-title-km { font-size: 1.35rem; font-weight: 700; color: var(--charcoal); }
+  .vet-guide .card-title-en {
+    font-family:'Inter','Segoe UI',sans-serif;
+    font-size: .78rem; font-weight: 600; letter-spacing:.12em;
+    text-transform: uppercase; color: var(--orange-dark); margin-bottom: 22px;
+  }
 
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
-        }
+  .vet-guide .card-link {
+    margin-top: auto;
+    display: inline-block;
+    background: var(--orange);
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: .98rem;
+    letter-spacing:.3px;
+    transition: background .25s ease;
+  }
+  .vet-guide .card:hover .card-link { background: var(--charcoal); }
 
-        .card-icon {
-            font-size: 4rem;
-            margin-bottom: 10px;
-        }
+  /* ---------- Help strip ---------- */
+  .vet-guide .help {
+    margin-top: 26px;
+    background: #fff;
+    border: 1px solid #E3E7EA;
+    border-left: 4px solid var(--charcoal);
+    border-radius: 10px;
+    padding: 18px 22px;
+    text-align: center;
+  }
+  .vet-guide .help-km { font-size: .95rem; color: var(--charcoal); font-weight: 500; }
+  .vet-guide .help-en {
+    font-family:'Inter','Segoe UI',sans-serif;
+    font-size: .84rem; color: var(--muted); margin-top: 2px;
+  }
+  .vet-guide .help a { color: var(--orange-dark); font-weight: 600; text-decoration: none; }
 
-        .card h2 {
-            font-size: 1.6rem;
-            color: #2c3e50;
-            margin-bottom: 5px;
-            font-weight: 600;
-        }
+  .vet-guide .footer {
+    text-align:center; margin-top: 26px;
+    font-family:'Inter','Segoe UI',sans-serif;
+    font-size:.78rem; color:#9AA3AB; letter-spacing:.04em;
+  }
 
-        .card-khmer {
-            font-size: 1.3rem;
-            color: #34495e;
-            margin-bottom: 15px;
-            font-weight: 500;
-        }
-
-        .card p {
-            color: #7f8c8d;
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin-bottom: 10px;
-        }
-
-        .card-khmer-desc {
-            color: #95a5a6;
-            font-size: 0.9rem;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        .card-link {
-            display: inline-block;
-            background: linear-gradient(135deg, #e74c3c 0%, #d35400 100%);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: opacity 0.3s ease;
-            align-self: center;
-        }
-
-        .card-link:hover {
-            opacity: 0.9;
-        }
-
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 1.8rem;
-            }
-
-            .header-khmer {
-                font-size: 1.4rem;
-            }
-
-            .options {
-                gap: 20px;
-            }
-
-            .card {
-                padding: 30px 20px;
-            }
-
-            .card-icon {
-                font-size: 3rem;
-            }
-
-            .card h2 {
-                font-size: 1.3rem;
-            }
-
-            .card-khmer {
-                font-size: 1.1rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .logo {
-                max-width: 150px;
-            }
-
-            .header h1 {
-                font-size: 1.4rem;
-            }
-
-            .header-khmer {
-                font-size: 1.1rem;
-            }
-
-            .header p {
-                font-size: 0.9rem;
-            }
-
-            .card {
-                padding: 25px 15px;
-            }
-
-            .card-icon {
-                font-size: 2.5rem;
-            }
-
-            .card h2 {
-                font-size: 1.1rem;
-            }
-
-            .card-khmer {
-                font-size: 0.95rem;
-            }
-
-            .card p {
-                font-size: 0.85rem;
-            }
-        }
-    </style>
+  /* ---------- Responsive ---------- */
+  @media (max-width: 768px) {
+    .vet-guide { padding: 20px 14px 36px; }
+    .vet-guide .masthead { padding: 32px 22px 28px; }
+    .vet-guide .title-km { font-size: 1.55rem; }
+    .vet-guide .title-en { font-size: .92rem; }
+    .vet-guide .options { gap: 14px; }
+  }
+  @media (max-width: 480px) {
+    .vet-guide .logo { max-width: 150px; }
+    .vet-guide .title-km { font-size: 1.28rem; }
+    .vet-guide .title-en { font-size: .8rem; letter-spacing:.1em; }
+    .vet-guide .options { gap: 10px; }
+    .vet-guide .card { padding: 24px 12px 22px; }
+    .vet-guide .card-icon { width: 68px; height: 68px; margin-bottom: 14px; }
+    .vet-guide .card-icon svg { width: 34px; height: 34px; }
+    .vet-guide .card-title-km { font-size: 1rem; }
+    .vet-guide .card-title-en { font-size: .68rem; letter-spacing:.08em; margin-bottom: 18px; }
+    .vet-guide .card-link { padding: 10px 14px; font-size: .85rem; width: 100%; }
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <img src="https://via.placeholder.com/200x100/FF6600/FFFFFF?text=VETEnergy" alt="VET Energy Logo" class="logo">
-            <h1>របៀបសាក់ថាមពលរថយន្ត</h1>
-            <div class="header-khmer">How to Charge Your Vehicle</div>
-            <p>ជ្រើសរើសវិធីណាមួយ ដើម្បីមើលការណែនាំ</p>
-            <div class="header-khmer-sub">Choose your preferred instruction format</div>
-        </div>
 
-        <div class="options">
-            <!-- Image Instructions Card -->
-            <a href="https://photos.app.goo.gl/o18QJEQ4zGRRsvzp6" target="_blank" class="card">
-                <div class="card-icon">🖼️</div>
-                <h2>ការណែនាំលម្អិត</h2>
-                <div class="card-khmer">Image Guide</div>
-                <p>អនុវត្តតាមការណែនាំលម្អិតជាដំណាលដោយរូបភាពឆាប់រហ័ស</p>
-                <div class="card-khmer-desc">Follow step-by-step instructions with detailed screenshots and annotations</div>
-                <span class="card-link">មើលរូបភាព</span>
-            </a>
+<div class="vet-guide">
+  <div class="container">
 
-            <!-- Video Instructions Card -->
-            <a href="https://drive.google.com/file/d/1qJBI1ia8DcZ61kokYOGvGKGgYVeJmpvK/view?usp=sharing" target="_blank" class="card">
-                <div class="card-icon">🎥</div>
-                <h2>វីដេអូបង្រៀន</h2>
-                <div class="card-khmer">Video Tutorial</div>
-                '<p>Watch a comprehensive video walkthrough of the entire process</p>
-                '<div class="card-khmer-desc">មើលការណែនាំវីដេអូលម្អិតរបស់ដំណើរការទាំងមូល</div>
-                <span class="card-link">មើលវីដេអូ</span>
-            </a>
-        </div>
+    <!-- ============ HEADER ============ -->
+    <div class="masthead">
+      <img src="https://via.placeholder.com/380x120/22262A/FF6B00?text=VET-ENERGY"
+           alt="VET-ENERGY" class="logo">
+      <h1 class="title-km">របៀបសាកថាមពលរថយន្ត</h1>
+      <div class="title-en">How to Charge Your Vehicle</div>
+      <div class="rule"></div>
+      <p class="sub-km">សូមជ្រើសរើសទម្រង់ការណែនាំដែលអ្នកចង់មើល</p>
+      <div class="sub-en">Choose your preferred instruction format</div>
     </div>
+
+    <!-- ============ OPTIONS ============ -->
+    <div class="options">
+
+      <!-- Image guide -->
+      <a href="https://photos.app.goo.gl/o18QJEQ4zGRRsvzp6" target="_blank" rel="noopener" class="card">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="16" rx="2"/>
+            <circle cx="8.5" cy="9.5" r="1.6"/>
+            <path d="M21 16l-5-5-6.5 6.5"/>
+          </svg>
+        </div>
+        <div class="card-title-km">ការណែនាំជារូបភាព</div>
+        <div class="card-title-en">Image Guide</div>
+        <span class="card-link">មើលរូបភាព</span>
+      </a>
+
+      <!-- Video guide -->
+      <a href="https://drive.google.com/file/d/1qJBI1ia8DcZ61kokYOGvGKGgYVeJmpvK/view?usp=sharing" target="_blank" rel="noopener" class="card">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2.5" y="5" width="14" height="14" rx="2"/>
+            <path d="M16.5 10.5L21.5 7.5v9l-5-3z"/>
+          </svg>
+        </div>
+        <div class="card-title-km">វីដេអូណែនាំ</div>
+        <div class="card-title-en">Video Tutorial</div>
+        <span class="card-link">មើលវីដេអូ</span>
+      </a>
+
+    </div>
+
+    <!-- ============ SUPPORT ============ -->
+    <div class="help">
+      <div class="help-km">ត្រូវការជំនួយ? សូមទាក់ទងបុគ្គលិកស្ថានីយ ឬលេខទូរស័ព្ទ <a href="tel:+855000000000">086 668 234</a></div>
+      <div class="help-en">Need help? Ask the station attendant or call our 24/7 support line.</div>
+    </div>
+
+    <div class="footer">VET-ENERGY EV CHARGING NETWORK &nbsp;•&nbsp; VIREAK BUNTHAM EXPRESS CO., LTD.</div>
+
+  </div>
+</div>
+
 </body>
 </html>
